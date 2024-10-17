@@ -1,7 +1,9 @@
-import Banner from "componentes/banner";
-import styles from "./Inicio/Inicio.module.css"
+import Banner from "componentes/Banner";
+import Post from 'componentes/Post'
+import styles from "./Inicio.module.css"
 
-import posts from 'assets/posts.json'
+
+import posts from 'json/posts.json'
 
 export default function Inicio(){
     return (
@@ -11,7 +13,7 @@ export default function Inicio(){
         <ul className={styles.posts}>
             {posts.map((post) => (  
                 <li key={post.id}>
-                    Post...
+                    <Post post={post}/>
                 </li>
             ))}
         </ul>
