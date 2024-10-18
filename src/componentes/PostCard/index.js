@@ -1,8 +1,12 @@
+import BotaoPrincipal from 'componentes/BotaoPrincipal'
 import styles from './Post.module.css'
+import { Link } from 'react-router-dom'
 
-export default function Post ( {post} ){
+export default function PostCard ( {post} ){
     return(
-        <div className={styles.post}>
+
+        <Link to={`/posts/${post.id}`}>
+            <div className={styles.post}>
             <img 
                 className={styles.capa} 
                 src={`/assets/posts/${post.id}/capa.png`}
@@ -11,8 +15,12 @@ export default function Post ( {post} ){
 
             <h2 className={styles.post.titulo}> {post.titulo}</h2>
             
-            <button className={styles.botaoLer}> ler </button>
+            <BotaoPrincipal>
+                ler
+            </BotaoPrincipal>
 
         </div>
+
+        </Link>
     )
 }
