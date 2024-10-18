@@ -10,10 +10,10 @@ export default function PostCard ( {post} ){
             <img 
                 className={styles.capa} 
                 src={`/assets/posts/${post.id}/capa.png`}
-             alt="Imagem de Capa do Post"
+                alt="Imagem de Capa do Post"
             />
 
-            <h2 className={styles.post.titulo}> {post.titulo}</h2>
+            <h2 className={styles.titulo}> {post.titulo}</h2>
             
             <BotaoPrincipal>
                 ler
